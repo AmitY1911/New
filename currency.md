@@ -1,11 +1,19 @@
 # notes for currency converter app
 
-## api link
+## api link - The currency api link has been changed
+
+## NEW
 
 ```javascript
-let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
-
+let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`;
 ```
+
+## OLD
+
+```javascript
+let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`;
+```
+
 
 ## input box
 
