@@ -1,5 +1,6 @@
+
 import { useState } from 'react'
-import {InputBox} from './components'
+import {InputBox} from './component'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 
@@ -9,7 +10,6 @@ function App() {
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
-
   const currencyInfo = useCurrencyInfo(from)
 
   const options = Object.keys(currencyInfo)
@@ -46,7 +46,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setFrom(currency)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
@@ -66,8 +66,9 @@ function App() {
                             amount={convertedAmount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+                            selectCurrency={to}
                             amountDisable
+                            onAmountChange={(amount) => setAmount(amount)}
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
