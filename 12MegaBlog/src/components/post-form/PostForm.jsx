@@ -40,7 +40,7 @@ export default function PostForm({ post }) {
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
-                const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
+                const dbPost = await appwriteService.createPost({ ...data, userId: file.$id }); // Preiously it was (userId: userData.$id) , changing it to (userId: file.$id) resolves the submit button error
 
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
