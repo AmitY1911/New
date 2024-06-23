@@ -22,7 +22,7 @@ function App() {
   }
   
   const convert = () => {
-    setConvertedAmount(amount * currencyInfo[to])
+    setConvertedAmount(Number(amount * currencyInfo[to]).toFixed(2)) // round the amount to 2 decimal places
   }
 
   return (
@@ -66,7 +66,7 @@ function App() {
                             amount={convertedAmount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+                            selectCurrency={to}
                             amountDisable
                         />
                     </div>
