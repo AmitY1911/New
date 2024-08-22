@@ -12,6 +12,10 @@ function TodoItem({ todo }) {
   }
   const toggleCompleted = () => {
     //console.log(todo.id);
+    if (isTodoEditable) {
+      alert("Connot mark while editing")
+      return
+    }
     toggleComplete(todo.id)
   }
 
