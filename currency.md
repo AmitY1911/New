@@ -3,7 +3,11 @@
 ## api link
 
 ```javascript
-let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
+//Invalid URL due to some changes in repository by Author
+// let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
+
+//Valid url as it states under npm now by Author
+let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
 
 ```
 
