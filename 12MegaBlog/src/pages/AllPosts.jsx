@@ -9,8 +9,10 @@ function AllPosts() {
         if (posts) {
             setPosts(posts.documents)
         }
-    })
-  return (
+    },[]);  // check this dependency array(else it will be infinite loop-calling)
+  
+  
+    return (
     <div className='w-full py-8'>
         <Container>
             <div className='flex flex-wrap'>
