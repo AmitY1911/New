@@ -5,6 +5,7 @@ function App() {
   return (
     <>
     <Chai/>
+    <Akash/>
     
     </>
   );
